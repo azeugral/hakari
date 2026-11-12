@@ -32,9 +32,10 @@ a{color:inherit}
 /* hero (ref. Corner Store) */
 .hero{position:relative;height:100svh;min-height:640px;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 62% 40%,#a3a5a2 0%,#8f918e 45%,#777976 100%)}
 .hero .top{position:absolute;top:96px;left:0;right:0;display:flex;justify-content:space-between;padding:0 clamp(16px,3vw,44px);font:400 clamp(20px,2.9vw,46px)/1 Anton,sans-serif;text-transform:uppercase;letter-spacing:-.005em;z-index:1}
-.hero h1{position:absolute;left:0;right:0;top:44%;text-align:center;white-space:nowrap;font:400 31vw/.78 Anton,sans-serif;letter-spacing:-.012em;z-index:1;transform:scaleY(1.06)}
-.hero .cut{position:absolute;bottom:0;left:58%;transform:translateX(-50%);height:100%;width:auto;max-width:none;object-fit:contain;z-index:2;filter:drop-shadow(0 30px 60px rgba(0,0,0,.25))}
-.hero .sc{position:absolute;right:clamp(16px,3vw,44px);top:calc(44% + 21vw);font:400 clamp(64px,11vw,200px)/1 "Pinyon Script",cursive;z-index:3;text-shadow:0 2px 18px rgba(0,0,0,.18)}
+.hero{--f:min(30vw,62svh)}
+.hero h1{position:absolute;left:0;right:0;top:36%;text-align:center;white-space:nowrap;font:400 var(--f)/.8 Anton,sans-serif;letter-spacing:-.012em;z-index:1}
+.hero .cut{position:absolute;bottom:0;right:0;height:96%;width:auto;max-width:none;z-index:2;transform:scaleX(-1);filter:drop-shadow(0 30px 60px rgba(0,0,0,.22))}
+.hero .sc{position:absolute;left:0;right:0;text-align:center;top:calc(36% + var(--f)*.62);font:400 calc(var(--f)*.44)/1 "Pinyon Script",cursive;z-index:3;padding-left:12%;text-shadow:0 2px 18px rgba(0,0,0,.2)}
 .hero .bot{position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:space-between;align-items:end;padding:0 clamp(16px,3vw,44px);z-index:4;font-size:13px}
 .btn{display:inline-block;padding:9px 22px;border:1px solid currentColor;text-decoration:none;font:500 13px "IBM Plex Mono",monospace;transition:background .3s var(--ease),color .3s var(--ease)}
 .btn.fill{background:var(--ink);color:#e9e9e9;border-color:var(--ink)}
@@ -117,9 +118,8 @@ figure{cursor:zoom-in}
 @media (max-width:560px){
  .hero .top{font-size:17px;top:80px}
  .hero .top span:last-child{text-align:right;max-width:9em}
- .hero h1{top:40%}
- .hero .cut{left:56%;height:82%}
- .hero .sc{top:calc(40% + 22vw);font-size:19vw}
+ .hero h1,.hero .sc{margin-top:4svh}
+ .hero .cut{height:70%;right:-22%}
  .drip svg{height:520px}
  .win{top:90px;margin-bottom:90px}
  .win .wn{margin-bottom:34px}
