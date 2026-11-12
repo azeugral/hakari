@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hakari — Anime e Blackwork no Ipiranga, SP</title>
+<meta name="description" content="Hakari, tatuador de anime e blackwork em espaço privado no Ipiranga, São Paulo. Projetos autorais, releituras e desenhos disponíveis.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;800;900&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&family=Syne:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#d9d9d9;--ink:#111;--wall:#8e908d;--line:#1a1a1a;--ease:cubic-bezier(.16,.84,.32,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 14px/1.5 "IBM Plex Mono",monospace;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;-webkit-touch-callout:none}
+a{color:inherit}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+/* topo */
+.nav{position:absolute;inset:0 0 auto;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px clamp(16px,3vw,40px);color:#fff}
+.nav .l,.nav .r{display:flex;gap:clamp(18px,3vw,48px)}
+.nav .r{justify-content:flex-end}
+.nav a{text-decoration:none;font-size:13px;transition:opacity .3s var(--ease)}
+.nav a:hover{opacity:.6}
+.nav .brand{font-family:"Syne",sans-serif;font-size:15px;letter-spacing:.2em}
+.nav .u{text-decoration:underline;text-underline-offset:4px}
+
+/* hero (ref. Corner Store) */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--wall);overflow:hidden;color:#fff}
+.hero .ph{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,calc(100svh*.8));}
+.hero .ph img{object-position:50% 30%}
+.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--wall),transparent 18%,transparent 82%,var(--wall))}
+.hero .top{position:absolute;top:84px;left:0;right:0;display:flex;justify-content:space-between;padding:0 clamp(16px,3vw,40px);font:400 clamp(18px,2.4vw,34px)/1 Anton,sans-serif;text-transform:uppercase;z-index:3}
+.hero h1{position:absolute;left:0;right:0;top:50%;transform:translateY(-58%);text-align:center;font:400 clamp(110px,25vw,420px)/.82 Anton,sans-serif;letter-spacing:-.01em;z-index:2;mix-blend-mode:normal}
+.hero .sc{position:absolute;left:0;right:0;top:50%;transform:translateY(12%);text-align:center;font:400 clamp(70px,13vw,230px)/1 "Pinyon Script",cursive;z-index:3;padding-left:18vw}
+.hero .bot{position:absolute;bottom:26px;left:0;right:0;display:flex;justify-content:space-between;align-items:end;padding:0 clamp(16px,3vw,40px);z-index:3;font-size:13px}
+.btn{display:inline-block;padding:9px 22px;border:1px solid currentColor;text-decoration:none;font:500 13px "IBM Plex Mono",monospace;transition:background .3s var(--ease),color .3s var(--ease)}
+.btn.fill{background:var(--ink);color:#e9e9e9;border-color:var(--ink)}
+.btn.fill:hover{background:transparent;color:var(--ink)}
+.btn.ln:hover{background:var(--ink);color:#e9e9e9}
+.hero .btn{color:#fff}.hero .btn:hover{background:#fff;color:var(--ink)}
+
+/* janela com tinta (ref. Hendy Gaia) */
+.drip{position:relative;padding:0 clamp(16px,6vw,120px) 120px}
+.drip svg{position:absolute;left:clamp(0px,3vw,60px);right:clamp(0px,3vw,60px);top:0;width:calc(100% - 2*clamp(0px,3vw,60px));height:760px;z-index:0}
+.win{position:relative;z-index:1;max-width:1180px;margin:0 auto;top:150px;background:var(--paper);border:1px solid var(--line);padding:clamp(18px,2.4vw,28px);margin-bottom:150px}
+.win .wn{display:flex;justify-content:space-between;font-size:13px;margin-bottom:60px}
+.win .wn span:first-child{font-family:"Syne",sans-serif;letter-spacing:.2em}
+.name{font:800 clamp(28px,4vw,46px)/1 "Syne",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding-left:20px;margin-bottom:40px}
+.bio{display:grid;grid-template-columns:260px 200px 1fr;gap:clamp(20px,5vw,72px);align-items:start}
+.bio .pic{aspect-ratio:4/5;filter:grayscale(1)}
+.bio p{font-size:11.5px;line-height:1.45;text-align:justify;hyphens:auto;margin-bottom:56px}
+.bio .side{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;height:100%;gap:20px}
+.pg{display:flex;justify-content:space-between;align-items:end;margin:40px 0 90px}
+.bento{display:grid;grid-template-columns:2fr 1fr 1fr 2fr;grid-auto-rows:clamp(120px,15vw,190px);gap:12px}
+.bento figure{overflow:hidden;background:#bbb}
+.bento img{transition:transform .6s var(--ease)}
+.bento figure:hover img{transform:scale(1.04)}
+.t{grid-row:span 2}.wd{grid-column:span 2;grid-row:span 2}
+.bento figcaption{display:none}
+
+/* WORK (ref. BLVCK) */
+.work{position:relative;background:#141414;color:#f1f1f1;max-width:1180px;margin:0 auto 140px;padding:70px clamp(16px,4vw,60px) 90px;overflow:hidden}
+.work h2{text-align:center;font:900 clamp(80px,15vw,190px)/.85 Archivo,sans-serif;letter-spacing:-.04em}
+.work .lead{max-width:440px;margin:18px auto 50px;text-align:center;font:800 11px/1.3 Archivo,sans-serif}
+.work .grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:0 auto}
+.work .grid figure{aspect-ratio:4/5;overflow:hidden}
+.blob{position:absolute;left:3%;bottom:-40px;width:clamp(200px,32vw,380px);z-index:2;pointer-events:none}
+.work .tags{position:absolute;top:22px;right:clamp(16px,3vw,30px);display:flex;gap:40px;font:800 10px/1.2 Archivo,sans-serif;text-transform:uppercase}
+.work .dot{position:absolute;top:22px;left:22px;width:46px;height:46px;border-radius:50%;background:#f1f1f1}
+
+/* disponíveis */
+.sec{max-width:1180px;margin:0 auto 140px;padding:0 clamp(16px,3vw,0px)}
+.sec-h{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:28px}
+.sec-h h2{font:400 clamp(54px,9vw,120px)/.85 Anton,sans-serif;text-transform:uppercase}
+.sec-h p{max-width:300px;font-size:11.5px;text-align:justify}
+.flash{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.flash figure{aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line)}
+
+/* como marcar */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.steps div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 18px 30px;min-height:190px}
+.steps b{display:block;font:400 34px/1 Anton,sans-serif;margin-bottom:28px}
+.steps h3{font:500 13px "IBM Plex Mono";margin-bottom:8px;text-transform:lowercase}
+.steps p{font-size:11.5px;text-align:justify}
+
+/* final */
+.end{position:relative;background:#141414;color:#f1f1f1;overflow:hidden;text-align:center;padding:110px 16px 40px}
+.end .big{font:400 clamp(90px,22vw,340px)/.8 Anton,sans-serif}
+.end .sc{font:400 clamp(56px,10vw,160px)/1 "Pinyon Script",cursive;margin-top:-.42em;padding-left:22vw}
+.end .info{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:50px 0 90px}
+.end .btn{color:#f1f1f1}.end .btn:hover{background:#f1f1f1;color:#141414}
+.end .btn.fill{background:#f1f1f1;color:#141414;border-color:#f1f1f1}.end .btn.fill:hover{background:transparent;color:#f1f1f1}
+.foot{display:flex;justify-content:space-between;font-size:12px;opacity:.7;max-width:1180px;margin:0 auto}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:20;background:rgba(17,17,17,.94);display:flex;align-items:center;justify-content:center;padding:20px}
+.lb img{width:auto;height:auto;max-width:100%;max-height:88svh;object-fit:contain}
+.lb button{position:absolute;top:18px;right:18px;background:none;border:1px solid #fff;color:#fff;font:500 13px "IBM Plex Mono";padding:8px 16px;cursor:pointer}
+figure{cursor:zoom-in}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+ .nav .l a:not(.brand-m),.nav .r a:not(.u){display:none}
+ .bio{grid-template-columns:1fr 1fr}.bio .side{grid-column:span 2;flex-direction:row;align-items:center}
+ .bento{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
+ .bento figure{aspect-ratio:4/5;grid-row:auto!important;grid-column:auto!important}
+ .flash{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .sec-h{flex-direction:column;align-items:center;text-align:center;gap:14px}
+ .sec-h p{text-align:center}
+}
+@media (max-width:560px){
+ .hero .top{font-size:15px;top:74px}
+ .hero h1{font-size:31vw}
+ .hero .sc{padding-left:10vw}
+ .drip svg{height:520px}
+ .win{top:90px;margin-bottom:90px}
+ .win .wn{margin-bottom:34px}
+ .name{padding-left:0;text-align:center}
+ .bio{grid-template-columns:1fr}.bio .side{grid-column:auto;justify-content:center}
+ .bio .pic{max-width:300px;margin:0 auto}
+ .bio p{margin-bottom:20px}
+ .pg{margin:24px 0 40px}
+ .work .tags{display:none}
+ .work .grid{gap:6px}
+ .steps div{min-height:0}
+ .end .sc{padding-left:12vw}
+ .foot{flex-direction:column;gap:6px;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="l"><a href="#portfolio">portfólio</a><a href="#work">trabalhos</a></div>
+  <a class="brand" href="#top">HK</a>
+  <div class="r"><a href="#disponiveis">disponíveis</a><a class="u" href="https://wa.me/5511977540159" target="_blank" rel="noopener">agendar</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="ph"><img src="img/hero.webp" alt="Costas inteiras tatuadas com uma serpente em blackwork, feita por Hakari" fetchpriority="high"></div>
+  <div class="top"><span>Ipiranga · SP</span><span>Anime / Blackwork</span></div>
+  <h1>HAKARI</h1>
+  <div class="sc">tattoo</div>
+  <div class="bot"><span>espaço privado</span><a class="btn" href="https://wa.me/5511977540159" target="_blank" rel="noopener">vamos conversar</a></div>
+</header>
+
+<section class="drip" id="portfolio">
+  <svg viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="#0d0d0d" d="M40 0H1160C1162 160 1150 330 1132 470C1124 540 1136 610 1128 660C1122 712 1080 712 1076 662C1070 600 1082 560 1076 520C1068 470 1040 420 1000 410H220C170 420 150 470 140 560C128 650 140 720 118 760C100 790 76 770 80 720C88 640 96 580 92 500C86 360 60 200 40 0Z"/>
+    <ellipse cx="96" cy="738" rx="22" ry="34" fill="#0d0d0d"/><ellipse cx="1100" cy="684" rx="26" ry="38" fill="#0d0d0d"/>
+  </svg>
+  <div class="win rv">
+    <div class="wn"><span>HK</span><span>portfólio</span></div>
+    <h2 class="name">Hakari</h2>
+    <div class="bio">
+      <figure class="pic"><img src="img/p01.webp" alt="Fechamento de Attack on Titan no antebraço"></figure>
+      <div>
+        <p>Hakari trabalha com anime e blackwork: preto sólido, contraste alto e cenas recortadas dos universos que tatua. Faz projetos autorais, releituras de capas de álbum, cartas de Yu-Gi-Oh! e fechamentos de braço e perna.</p>
+        <p>Atende num espaço privado no Ipiranga, em São Paulo. O orçamento é pelo <a href="https://wa.me/5511977540159" target="_blank" rel="noopener">WhatsApp</a> ou por <a href="https://ig.me/m/hakari_ttt" target="_blank" rel="noopener">DM no Instagram</a>: mande a ideia, o local do corpo e o tamanho.</p>
+      </div>
+      <div class="side">
+        <span>página (0 – 3)</span>
+        <a class="btn fill" href="https://www.instagram.com/hakari_ttt/" target="_blank" rel="noopener">instagram</a>
+      </div>
+    </div>
+    <div class="pg"><a class="btn ln" href="#work">ver trabalhos</a><span>10 peças</span></div>
+    <div class="bento">
+      <figure class="t"><img src="img/p03.webp" alt="Tatuagem de anime no antebraço"></figure>
+      <figure><img src="img/p06.webp" alt="Lírio em blackwork"></figure>
+      <figure><img src="img/p05.webp" alt="Cobertura Homem-Aranha contra Spot"></figure>
+      <figure class="t"><img src="img/p10.webp" alt="Dracarys, dragão no braço"></figure>
+      <figure><img src="img/p07.webp" alt="Lion Heart, tema religioso"></figure>
+      <figure><img src="img/p04.webp" alt="Fechamento de braço em anime"></figure>
+      <figure class="wd"><img src="img/p11.webp" alt="Dragão no antebraço"></figure>
+      <figure><img src="img/p09.webp" alt="Itadori, Receptáculo"></figure>
+      <figure class="t"><img src="img/p12.webp" alt="Might Guy"></figure>
+      <figure><img src="img/p08.webp" alt="Anime, fechamento de perna"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="work rv" id="work">
+  <span class="dot" aria-hidden="true"></span>
+  <div class="tags"><span>● anime<br>● blackwork</span><span>● releituras<br>● fechamentos</span></div>
+  <h2>WORK</h2>
+  <p class="lead">Cada peça é desenhada para o corpo de quem vai usar. Cenas de anime, mangá e games recortadas em preto sólido, pensadas para durar na pele e cicatrizar bonitas.</p>
+  <div class="grid">
+    <figure><img src="img/w01.webp" alt="Zoro"></figure>
+    <figure><img src="img/w02.webp" alt="Vegeta e Gengar"></figure>
+    <figure><img src="img/w03.webp" alt="Gojo"></figure>
+    <figure><img src="img/w04.webp" alt="Suguru Geto"></figure>
+    <figure><img src="img/w05.webp" alt="Shikamaru Nara"></figure>
+    <figure><img src="img/w06.webp" alt="Pantera"></figure>
+    <figure><img src="img/w07.webp" alt="Kurapika"></figure>
+    <figure><img src="img/w08.webp" alt="Tanjiro"></figure>
+    <figure><img src="img/w09.webp" alt="Aki contra Fushiguro"></figure>
+  </div>
+  <svg class="blob" viewBox="0 0 380 300" aria-hidden="true"><path fill="#f1f1f1" d="M118 20c40-30 92 0 86 46-4 34-40 46-34 74 6 26 50 18 96 22 54 6 92 44 82 84-12 46-74 52-150 52H70C26 298 0 270 4 232c4-42 40-58 78-62 34-4 40-26 22-50-24-32-22-78 14-100Z"/></svg>
+</section>
+
+<section class="sec" id="disponiveis">
+  <div class="sec-h rv">
+    <h2>Disponíveis</h2>
+    <p>Desenhos prontos para tatuar, com valor especial. Cada um sai uma vez só: escolheu, manda a mensagem com o nome da folhinha.</p>
+  </div>
+  <div class="flash rv">
+    <figure><img src="img/f1.webp" alt="Folhinha de desenhos disponíveis"></figure>
+    <figure><img src="img/f2.webp" alt="Folhinha de desenhos disponíveis"></figure>
+    <figure><img src="img/f3.webp" alt="Folhinha de desenhos disponíveis"></figure>
+    <figure><img src="img/f4.webp" alt="Folhinha de desenhos disponíveis"></figure>
+  </div>
+</section>
+
+<section class="sec" id="agendar">
+  <div class="sec-h rv">
+    <h2>Como marcar</h2>
+    <p>Tudo por mensagem, sem formulário. A resposta vem com valor, tempo de sessão e as datas livres.</p>
+  </div>
+  <div class="steps rv">
+    <div><b>1</b><h3>a ideia</h3><p>Conte o que quer tatuar, com referências do anime ou da cena.</p></div>
+    <div><b>2</b><h3>local e tamanho</h3><p>Diga a parte do corpo e um tamanho aproximado em centímetros.</p></div>
+    <div><b>3</b><h3>orçamento</h3><p>Você recebe o valor e as datas. O sinal reserva o horário.</p></div>
+    <div><b>4</b><h3>sessão</h3><p>O desenho fica pronto antes, e o ajuste final é feito no dia, no espaço do Ipiranga.</p></div>
+  </div>
+</section>
+
+<footer class="end">
+  <div class="big">HAKARI</div>
+  <div class="sc">vamos conversar</div>
+  <div class="info">
+    <a class="btn fill" href="https://wa.me/5511977540159" target="_blank" rel="noopener">whatsapp</a>
+    <a class="btn" href="https://www.instagram.com/hakari_ttt/" target="_blank" rel="noopener">@hakari_ttt</a>
+  </div>
+  <div class="foot"><span>Ipiranga · São Paulo · espaço privado</span><span>Site por <a href="https://lrgz.com.br">L R G Z</a></span></div>
+</footer>
+
+<div class="lb" hidden><button type="button">fechar</button><img alt=""></div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const lb=document.querySelector('.lb'),li=lb.querySelector('img');
+document.querySelectorAll('figure img').forEach(i=>i.parentElement.addEventListener('click',()=>{li.src=i.src;li.alt=i.alt;lb.hidden=false}));
+lb.addEventListener('click',()=>lb.hidden=true);
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true});
+</script>
+</body>
+</html>
