@@ -31,10 +31,10 @@ a{color:inherit}
 
 /* hero (ref. Corner Store) */
 .hero{position:relative;height:100svh;min-height:640px;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 62% 40%,#a3a5a2 0%,#8f918e 45%,#777976 100%)}
-.hero .top{position:absolute;top:96px;left:0;right:0;display:flex;justify-content:space-between;padding:0 clamp(16px,3vw,44px);font:400 clamp(20px,2.9vw,46px)/1 Anton,sans-serif;text-transform:uppercase;letter-spacing:-.005em;z-index:1}
+.hero .top{position:absolute;top:96px;left:0;right:0;display:flex;justify-content:space-between;padding:0 clamp(16px,3vw,44px);font:400 clamp(20px,2.9vw,46px)/1 Anton,sans-serif;text-transform:uppercase;letter-spacing:-.005em;z-index:3}
 .hero{--f:min(30vw,62svh)}
-.hero h1{position:absolute;left:0;right:0;top:36%;text-align:center;white-space:nowrap;font:400 var(--f)/.8 Anton,sans-serif;letter-spacing:-.012em;z-index:1}
-.hero .cut{position:absolute;bottom:0;right:0;height:96%;width:auto;max-width:none;z-index:2;transform:scaleX(-1);filter:drop-shadow(0 30px 60px rgba(0,0,0,.22))}
+.hero h1{position:absolute;left:0;right:0;top:36%;text-align:center;white-space:nowrap;font:400 var(--f)/.8 Anton,sans-serif;letter-spacing:-.012em;z-index:3}
+.hero .cut{position:absolute;bottom:0;right:0;height:88%;width:auto;max-width:none;z-index:2;transform:scaleX(-1);filter:drop-shadow(0 30px 60px rgba(0,0,0,.22))}
 .hero .sc{position:absolute;left:0;right:0;text-align:center;top:calc(36% + var(--f)*.62);font:400 calc(var(--f)*.44)/1 "Pinyon Script",cursive;z-index:3;padding-left:12%;text-shadow:0 2px 18px rgba(0,0,0,.2)}
 .hero .bot{position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:space-between;align-items:end;padding:0 clamp(16px,3vw,44px);z-index:4;font-size:13px}
 .btn{display:inline-block;padding:9px 22px;border:1px solid currentColor;text-decoration:none;font:500 13px "IBM Plex Mono",monospace;transition:background .3s var(--ease),color .3s var(--ease)}
