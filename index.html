@@ -7,7 +7,7 @@
 <meta name="description" content="Hakari, tatuador de anime e blackwork em espaço privado no Ipiranga, São Paulo. Projetos autorais, releituras e desenhos disponíveis.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="img/favicon.svg">
-<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preload" as="image" href="img/hero-cut.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;800;900&family=IBM+Plex+Mono:wght@400;500&family=Pinyon+Script&family=Syne:wght@800&display=swap" rel="stylesheet">
 <style>
@@ -20,24 +20,22 @@ img{display:block;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none
 a{color:inherit}
 .mono{font-family:"IBM Plex Mono",monospace}
 
-/* topo */
-.nav{position:absolute;inset:0 0 auto;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px clamp(16px,3vw,40px);color:#fff}
-.nav .l,.nav .r{display:flex;gap:clamp(18px,3vw,48px)}
-.nav .r{justify-content:flex-end}
-.nav a{text-decoration:none;font-size:13px;transition:opacity .3s var(--ease)}
-.nav a:hover{opacity:.6}
-.nav .brand{font-family:"Syne",sans-serif;font-size:15px;letter-spacing:.2em}
+/* topo (ref. Hendy Gaia) */
+.nav{position:absolute;inset:0 0 auto;z-index:6;display:flex;align-items:center;padding:30px clamp(16px,3vw,44px);color:var(--ink);font-size:14px}
+.nav a{text-decoration:none;transition:opacity .3s var(--ease)}
+.nav a:hover{opacity:.55}
+.nav .brand{font:500 18px "IBM Plex Mono",monospace;letter-spacing:.04em;width:clamp(70px,9vw,130px)}
+.nav .l,.nav .r{display:flex;gap:clamp(40px,7.5vw,132px)}
+.nav .r{margin-left:auto}
 .nav .u{text-decoration:underline;text-underline-offset:4px}
 
 /* hero (ref. Corner Store) */
-.hero{position:relative;height:100svh;min-height:620px;background:var(--wall);overflow:hidden;color:#fff}
-.hero .ph{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,calc(100svh*.8));}
-.hero .ph img{object-position:50% 30%}
-.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--wall),transparent 18%,transparent 82%,var(--wall))}
-.hero .top{position:absolute;top:84px;left:0;right:0;display:flex;justify-content:space-between;padding:0 clamp(16px,3vw,40px);font:400 clamp(18px,2.4vw,34px)/1 Anton,sans-serif;text-transform:uppercase;z-index:3}
-.hero h1{position:absolute;left:0;right:0;top:50%;transform:translateY(-58%);text-align:center;font:400 clamp(110px,25vw,420px)/.82 Anton,sans-serif;letter-spacing:-.01em;z-index:2;mix-blend-mode:normal}
-.hero .sc{position:absolute;left:0;right:0;top:50%;transform:translateY(12%);text-align:center;font:400 clamp(70px,13vw,230px)/1 "Pinyon Script",cursive;z-index:3;padding-left:18vw}
-.hero .bot{position:absolute;bottom:26px;left:0;right:0;display:flex;justify-content:space-between;align-items:end;padding:0 clamp(16px,3vw,40px);z-index:3;font-size:13px}
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 62% 40%,#a3a5a2 0%,#8f918e 45%,#777976 100%)}
+.hero .top{position:absolute;top:96px;left:0;right:0;display:flex;justify-content:space-between;padding:0 clamp(16px,3vw,44px);font:400 clamp(20px,2.9vw,46px)/1 Anton,sans-serif;text-transform:uppercase;letter-spacing:-.005em;z-index:1}
+.hero h1{position:absolute;left:0;right:0;top:44%;text-align:center;white-space:nowrap;font:400 31vw/.78 Anton,sans-serif;letter-spacing:-.012em;z-index:1;transform:scaleY(1.06)}
+.hero .cut{position:absolute;bottom:0;left:58%;transform:translateX(-50%);height:100%;width:auto;max-width:none;object-fit:contain;z-index:2;filter:drop-shadow(0 30px 60px rgba(0,0,0,.25))}
+.hero .sc{position:absolute;right:clamp(16px,3vw,44px);top:calc(44% + 21vw);font:400 clamp(64px,11vw,200px)/1 "Pinyon Script",cursive;z-index:3;text-shadow:0 2px 18px rgba(0,0,0,.18)}
+.hero .bot{position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:space-between;align-items:end;padding:0 clamp(16px,3vw,44px);z-index:4;font-size:13px}
 .btn{display:inline-block;padding:9px 22px;border:1px solid currentColor;text-decoration:none;font:500 13px "IBM Plex Mono",monospace;transition:background .3s var(--ease),color .3s var(--ease)}
 .btn.fill{background:var(--ink);color:#e9e9e9;border-color:var(--ink)}
 .btn.fill:hover{background:transparent;color:var(--ink)}
@@ -91,7 +89,7 @@ a{color:inherit}
 /* final */
 .end{position:relative;background:#141414;color:#f1f1f1;overflow:hidden;text-align:center;padding:110px 16px 40px}
 .end .big{font:400 clamp(90px,22vw,340px)/.8 Anton,sans-serif}
-.end .sc{font:400 clamp(56px,10vw,160px)/1 "Pinyon Script",cursive;margin-top:-.42em;padding-left:22vw}
+.end .sc{font:400 clamp(52px,8vw,130px)/1.1 "Pinyon Script",cursive;margin-top:.12em}
 .end .info{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:50px 0 90px}
 .end .btn{color:#f1f1f1}.end .btn:hover{background:#f1f1f1;color:#141414}
 .end .btn.fill{background:#f1f1f1;color:#141414;border-color:#f1f1f1}.end .btn.fill:hover{background:transparent;color:#f1f1f1}
@@ -107,7 +105,7 @@ figure{cursor:zoom-in}
 .rv.in{opacity:1;transform:none}
 
 @media (max-width:900px){
- .nav .l a:not(.brand-m),.nav .r a:not(.u){display:none}
+ .nav .l,.nav .r a:not(.u){display:none}
  .bio{grid-template-columns:1fr 1fr}.bio .side{grid-column:span 2;flex-direction:row;align-items:center}
  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
  .bento figure{aspect-ratio:4/5;grid-row:auto!important;grid-column:auto!important}
@@ -117,9 +115,11 @@ figure{cursor:zoom-in}
  .sec-h p{text-align:center}
 }
 @media (max-width:560px){
- .hero .top{font-size:15px;top:74px}
- .hero h1{font-size:31vw}
- .hero .sc{padding-left:10vw}
+ .hero .top{font-size:17px;top:80px}
+ .hero .top span:last-child{text-align:right;max-width:9em}
+ .hero h1{top:40%}
+ .hero .cut{left:56%;height:82%}
+ .hero .sc{top:calc(40% + 22vw);font-size:19vw}
  .drip svg{height:520px}
  .win{top:90px;margin-bottom:90px}
  .win .wn{margin-bottom:34px}
@@ -140,15 +140,15 @@ figure{cursor:zoom-in}
 <body>
 
 <nav class="nav">
-  <div class="l"><a href="#portfolio">portfólio</a><a href="#work">trabalhos</a></div>
   <a class="brand" href="#top">HK</a>
-  <div class="r"><a href="#disponiveis">disponíveis</a><a class="u" href="https://wa.me/5511977540159" target="_blank" rel="noopener">agendar</a></div>
+  <div class="l"><a href="#portfolio">portfólio</a><a href="#work">trabalhos</a></div>
+  <div class="r"><a href="#disponiveis">disponíveis</a><a class="u" href="#agendar">agendar</a><a href="https://wa.me/5511977540159" target="_blank" rel="noopener">contato</a></div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="ph"><img src="img/hero.webp" alt="Costas inteiras tatuadas com uma serpente em blackwork, feita por Hakari" fetchpriority="high"></div>
-  <div class="top"><span>Ipiranga · SP</span><span>Anime / Blackwork</span></div>
+  <div class="top"><span>Ipiranga · SP</span><span>Anime / Blackwork @hakari_ttt</span></div>
   <h1>HAKARI</h1>
+  <img class="cut" src="img/hero-cut.webp" alt="Costas inteiras tatuadas com uma serpente em blackwork, feita por Hakari" fetchpriority="high">
   <div class="sc">tattoo</div>
   <div class="bot"><span>espaço privado</span><a class="btn" href="https://wa.me/5511977540159" target="_blank" rel="noopener">vamos conversar</a></div>
 </header>
