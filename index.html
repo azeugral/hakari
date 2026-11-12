@@ -34,7 +34,7 @@ a{color:inherit}
 .hero .top{position:absolute;top:96px;left:0;right:0;display:flex;justify-content:space-between;padding:0 clamp(16px,3vw,44px);font:400 clamp(20px,2.9vw,46px)/1 Anton,sans-serif;text-transform:uppercase;letter-spacing:-.005em;z-index:3}
 .hero{--f:min(30vw,62svh)}
 .hero h1{position:absolute;left:0;right:0;top:36%;text-align:center;white-space:nowrap;font:400 var(--f)/.8 Anton,sans-serif;letter-spacing:-.012em;z-index:3}
-.hero .cut{position:absolute;bottom:0;right:0;height:88%;width:auto;max-width:none;z-index:2;transform:scaleX(-1);filter:drop-shadow(0 30px 60px rgba(0,0,0,.22))}
+.hero .cut{position:absolute;bottom:0;right:0;height:100%;width:auto;max-width:none;z-index:2;transform:scaleX(-1);filter:drop-shadow(0 30px 60px rgba(0,0,0,.22))}
 .hero .sc{position:absolute;left:0;right:0;text-align:center;top:calc(36% + var(--f)*.62);font:400 calc(var(--f)*.44)/1 "Pinyon Script",cursive;z-index:3;padding-left:12%;text-shadow:0 2px 18px rgba(0,0,0,.2)}
 .hero .bot{position:absolute;bottom:28px;left:0;right:0;display:flex;justify-content:space-between;align-items:end;padding:0 clamp(16px,3vw,44px);z-index:4;font-size:13px}
 .btn{display:inline-block;padding:9px 22px;border:1px solid currentColor;text-decoration:none;font:500 13px "IBM Plex Mono",monospace;transition:background .3s var(--ease),color .3s var(--ease)}
@@ -118,8 +118,8 @@ figure{cursor:zoom-in}
 @media (max-width:560px){
  .hero .top{font-size:17px;top:80px}
  .hero .top span:last-child{text-align:right;max-width:9em}
- .hero h1,.hero .sc{margin-top:4svh}
- .hero .cut{height:70%;right:-22%}
+ .hero h1{margin-top:4svh}.hero .sc{margin-top:calc(4svh + 3vw)}
+ .hero .cut{height:100%;right:-34%}
  .drip svg{height:520px}
  .win{top:90px;margin-bottom:90px}
  .win .wn{margin-bottom:34px}
